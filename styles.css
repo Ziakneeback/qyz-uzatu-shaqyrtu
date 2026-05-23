@@ -1,0 +1,423 @@
+:root {
+  --wine: #5a1414;
+  --wine-soft: #7a2d2b;
+  --ink: #251414;
+  --muted: #6f5b55;
+  --paper: #fffdf9;
+  --line: #eaded5;
+  --gold: #b89968;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+audio {
+  display: none;
+}
+
+.invite {
+  width: min(100%, 480px);
+  margin: 0 auto;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(184, 153, 104, 0.12), transparent 26rem),
+    linear-gradient(180deg, #fff 0%, #fffaf3 44%, #fff 100%);
+  box-shadow: 0 0 36px rgba(90, 20, 20, 0.09);
+  overflow: hidden;
+}
+
+.section {
+  position: relative;
+  min-height: 420px;
+  padding: 56px 28px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.hero {
+  min-height: 760px;
+  padding: 36px 20px 58px;
+  background:
+    radial-gradient(ellipse at 18% 18%, rgba(90, 20, 20, 0.07), transparent 26%),
+    radial-gradient(ellipse at 82% 36%, rgba(184, 153, 104, 0.12), transparent 30%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(250, 245, 239, 0.68) 46%, #fff 78%);
+}
+
+.hero-content {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 420px;
+}
+
+.eyebrow,
+.date-line,
+.section-title,
+.ceremony-date,
+.ceremony-time,
+.venue,
+.address,
+.parents,
+.body-copy,
+.closing p {
+  margin: 0;
+}
+
+.eyebrow {
+  color: var(--wine);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+h1 {
+  margin: 4px 0 8px;
+  color: var(--wine);
+  font-family: "Bad Script", cursive;
+  font-size: clamp(76px, 24vw, 116px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.date-line {
+  color: var(--wine);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.music-button {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  margin-top: 30px;
+  border: 1px solid rgba(90, 20, 20, 0.2);
+  border-radius: 999px;
+  appearance: none;
+  background: #fff;
+  color: var(--wine);
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(90, 20, 20, 0.15);
+  -webkit-tap-highlight-color: transparent;
+  isolation: isolate;
+}
+
+.music-button:hover {
+  background: #fff;
+}
+
+.play-icon {
+  width: 0;
+  height: 0;
+  margin-left: 7px;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-left: 28px solid var(--wine);
+}
+
+
+.floral {
+  display: none;
+}
+
+.intro,
+.countdown-section,
+.rsvp {
+  background: #fff;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 28px;
+  right: 28px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line), transparent);
+}
+
+.section-title {
+  color: var(--wine);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.parents {
+  margin-top: 24px;
+  color: var(--wine);
+  font-family: "Bad Script", cursive;
+  font-size: 38px;
+  line-height: 1.15;
+}
+
+.body-copy {
+  max-width: 360px;
+  margin-top: 28px;
+  color: var(--wine);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.ceremony {
+  min-height: 370px;
+  background: #fffaf3;
+}
+
+.ceremony-date {
+  margin-top: 34px;
+  color: var(--wine);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.ceremony-time {
+  margin-top: 12px;
+  color: var(--wine-soft);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.countdown-section {
+  min-height: 330px;
+}
+
+.countdown {
+  width: 100%;
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.countdown div {
+  min-width: 0;
+  padding: 15px 8px 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffaf7;
+}
+
+.countdown strong {
+  display: block;
+  color: var(--wine);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.countdown span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.location {
+  min-height: 430px;
+  background: #fffaf3;
+}
+
+.venue {
+  margin-top: 30px;
+  color: var(--wine);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.address {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.map-link {
+  width: 126px;
+  height: 126px;
+  margin-top: 32px;
+  display: inline-grid;
+  place-items: center;
+  text-decoration: none;
+}
+
+.map-pin {
+  position: relative;
+  width: 104px;
+  height: 104px;
+  border-radius: 28px;
+  background: #2f8a45;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 21px;
+  font-weight: 800;
+  box-shadow: 0 16px 32px rgba(47, 138, 69, 0.22);
+}
+
+.map-pin::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.rsvp {
+  min-height: 560px;
+  align-content: start;
+}
+
+.rsvp-form {
+  width: 100%;
+  margin-top: 30px;
+  display: grid;
+  gap: 18px;
+  text-align: left;
+}
+
+.rsvp-form label,
+.rsvp-form fieldset {
+  margin: 0;
+}
+
+.rsvp-form label > span,
+.rsvp-form legend {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.rsvp-form input[type="text"],
+.rsvp-form input[type="number"] {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #201414;
+  border-radius: 20px;
+  padding: 0 18px;
+  background: #fff;
+  color: #000;
+  outline: none;
+  font-weight: 700;
+}
+
+.rsvp-form input:focus {
+  border-color: var(--wine);
+  box-shadow: 0 0 0 3px rgba(90, 20, 20, 0.12);
+}
+
+.rsvp-form fieldset {
+  border: 0;
+  padding: 0;
+}
+
+.radio-row {
+  min-height: 32px;
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  align-items: start;
+  gap: 9px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.radio-row + .radio-row {
+  margin-top: 8px;
+}
+
+.radio-row input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--wine);
+}
+
+.submit-button {
+  width: 200px;
+  height: 50px;
+  justify-self: center;
+  border: 0;
+  border-radius: 40px;
+  background: var(--wine);
+  color: #fff;
+  cursor: pointer;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.submit-button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.form-status {
+  min-height: 22px;
+  margin: 0;
+  color: var(--wine);
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.closing {
+  min-height: 310px;
+  background: #fffaf3;
+}
+
+.closing p {
+  color: #592005;
+  font-family: "Bad Script", cursive;
+  font-size: 44px;
+  line-height: 1.28;
+}
+
+@media (min-width: 481px) {
+  body {
+    padding: 24px 0;
+  }
+
+  .invite {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .section {
+    padding-inline: 20px;
+  }
+
+  .countdown {
+    gap: 7px;
+  }
+
+  .countdown strong {
+    font-size: 28px;
+  }
+}

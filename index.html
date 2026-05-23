@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="kk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Айнүр қыз ұзату тойына шақыру" />
+    <meta property="og:title" content="Айнүр қыз ұзату 21.08.2026" />
+    <meta property="og:description" content="Қыз ұзату тойына шақыру" />
+    <meta property="og:type" content="website" />
+    <title>Айнүр қыз ұзату 21.08.2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=4" />
+    <style>
+      audio,
+      audio[controls] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        opacity: 0 !important;
+      }
+
+      .hero {
+        background:
+          radial-gradient(ellipse at 18% 18%, rgba(90, 20, 20, 0.07), transparent 26%),
+          radial-gradient(ellipse at 82% 36%, rgba(184, 153, 104, 0.12), transparent 30%),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(250, 245, 239, 0.68) 46%, #fff 78%) !important;
+      }
+
+      .music-button,
+      .music-button.is-playing {
+        position: relative !important;
+        width: 92px !important;
+        height: 92px !important;
+        border-radius: 999px !important;
+        background: #fff !important;
+        display: inline-grid !important;
+        place-items: center !important;
+        overflow: hidden !important;
+      }
+
+      .music-button::before,
+      .music-button::after {
+        content: none !important;
+        display: none !important;
+      }
+
+      .music-button .play-icon,
+      .music-button.is-playing .play-icon {
+        width: 0 !important;
+        height: 0 !important;
+        margin-left: 7px !important;
+        border-top: 18px solid transparent !important;
+        border-bottom: 18px solid transparent !important;
+        border-left: 28px solid #5a1414 !important;
+        background: transparent !important;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="invite">
+      <section class="hero section">
+        <div class="hero-content">
+          <p class="eyebrow">Қыз ұзату тойына шақыру</p>
+          <h1>Айнұр</h1>
+          <p class="date-line">21 / 08 / 2026</p>
+          <button class="music-button" id="musicButton" type="button" aria-label="Музыканы қосу">
+            <span class="play-icon" aria-hidden="true"></span>
+          </button>
+          <audio id="weddingMusic" preload="none" src="music.mp3"></audio>
+        </div>
+      </section>
+
+      <section class="section intro">
+        <p class="section-title">Құрметті қонақтар!</p>
+        <p class="parents">Қабылжан-Нұрсулу</p>
+        <p class="body-copy">
+          СІЗ(ДЕР)ДІ қызымыз <strong>Айнұрдың</strong> ұзату тойына арналған салтанатты
+          ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!
+        </p>
+      </section>
+
+      <section class="section ceremony">
+        <p class="section-title">Той салтанаты:</p>
+        <p class="ceremony-date">21 тамыз 2026 жыл</p>
+        <p class="ceremony-time">Сағат 17:00-де басталады</p>
+      </section>
+
+      <section class="section countdown-section">
+        <p class="section-title">Тойға дейін</p>
+        <div class="countdown" aria-label="Тойға дейін қалған уақыт">
+          <div>
+            <strong id="days">00</strong>
+            <span>күн</span>
+          </div>
+          <div>
+            <strong id="hours">00</strong>
+            <span>сағат</span>
+          </div>
+          <div>
+            <strong id="minutes">00</strong>
+            <span>минут</span>
+          </div>
+          <div>
+            <strong id="seconds">00</strong>
+            <span>секунд</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section location">
+        <p class="section-title">Мекен-жайымыз:</p>
+        <p class="venue">Ақсай 1а, 15/1</p>
+        <p class="address">Алматы қаласы</p>
+        <a
+          class="map-link"
+          href="https://2gis.kz/almaty/geo/9430047375181256/76.828730,43.239712"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="2ГИС картасын ашу"
+        >
+          <span class="map-pin" aria-hidden="true">2ГИС</span>
+        </a>
+      </section>
+
+      <section class="section rsvp">
+        <p class="section-title">Тойға келетініңізді растауыңызды сұраймыз</p>
+        <form id="rsvpForm" class="rsvp-form">
+          <label>
+            <span>Аты-жөніңіз</span>
+            <input name="name" type="text" placeholder="Аты-жөніңізді жазыңыз" required />
+          </label>
+
+          <fieldset>
+            <legend>Жауабыңыз</legend>
+            <label class="radio-row">
+              <input name="choice" type="radio" value="Әрине, келемін" required />
+              <span>Әрине, келемін</span>
+            </label>
+            <label class="radio-row">
+              <input name="choice" type="radio" value="Жұбайыммен келемін" />
+              <span>Жұбайыммен келемін</span>
+            </label>
+            <label class="radio-row">
+              <input name="choice" type="radio" value="Өкінішке орай, келе алмаймын" />
+              <span>Өкінішке орай, келе алмаймын</span>
+            </label>
+          </fieldset>
+
+          <label>
+            <span>Қанша адам келесіздер?</span>
+            <input name="guests" type="number" min="0" max="20" placeholder="1" required />
+          </label>
+
+          <button class="submit-button" type="submit">Жауап беру</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="section closing">
+        <p>Келіңіздер,<br />тойымыздың қадірлі<br />қонағы болыңыздар!</p>
+      </section>
+    </main>
+
+    <script src="script.js?v=4"></script>
+  </body>
+</html>
