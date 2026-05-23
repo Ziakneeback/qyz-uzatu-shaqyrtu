@@ -3,17 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Айнұр қыз ұзату тойына шақыру" />
-    <meta property="og:title" content="Айнұр қыз ұзату 21.08.2026" />
+    <meta name="description" content="Айнүр қыз ұзату тойына шақыру" />
+    <meta property="og:title" content="Айнүр қыз ұзату 21.08.2026" />
     <meta property="og:description" content="Қыз ұзату тойына шақыру" />
     <meta property="og:type" content="website" />
-    <title>Айнұр қыз ұзату 21.08.2026</title>
+    <title>Айнүр қыз ұзату 21.08.2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css?v=4" />
     <style>
       audio,
@@ -24,40 +21,65 @@
         opacity: 0 !important;
       }
 
+      /* Фотография без затемнения */
       .hero {
-        background:
-          radial-gradient(ellipse at 18% 18%, rgba(90, 20, 20, 0.07), transparent 26%),
-          radial-gradient(ellipse at 82% 36%, rgba(184, 153, 104, 0.12), transparent 30%),
-          linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(250, 245, 239, 0.68) 46%, #fff 78%) !important;
+        background: url('botam.jpeg') center/cover no-repeat !important;
+        align-content: flex-end !important;
+        padding: 24px !important;
+        padding-top: 300px !important;
       }
 
-      .music-button,
-      .music-button.is-playing {
+      /* Плашка (фон) специально для блока с текстом */
+      .hero-content {
+        background: rgba(255, 255, 255, 0.45) !important; /* Полупрозрачный белый */
+        padding: 10px 10px !important;
+        border-radius: 15px !important;
+        box-shadow: 0 12px 36px rgba(90, 44, 44, 0.25) !important;
+        width: 100% !important;
+      }
+
+      /* Убираем белую обводку текста, так как карточка уже светлая */
+      .hero h1,
+      .hero p,
+      .hero span,
+      .hero .date-line {
+        text-shadow: 
+          -1px -1px 0 #ffffff,  
+           1px -1px 0 #ffffff,
+          -1px  1px 0 #ffffff,
+           1px  1px 0 #ffffff,
+           0 4px 12px rgba(81, 45, 168, 0.15) !important; /* Легкая фиолетовая тень для глубины */
+      }
+
+      .music-button {
         position: relative !important;
-        width: 92px !important;
-        height: 92px !important;
+        width: 50px !important;
+        height: 50px !important;
         border-radius: 999px !important;
-        background: #fff !important;
+        background: #a04e36 !important;
         display: inline-grid !important;
         place-items: center !important;
-        overflow: hidden !important;
+        box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15) !important;
+        margin-top: 14px !important;
       }
 
       .music-button::before,
       .music-button::after {
-        content: none !important;
         display: none !important;
       }
 
-      .music-button .play-icon,
-      .music-button.is-playing .play-icon {
+      .play-icon {
         width: 0 !important;
         height: 0 !important;
-        margin-left: 7px !important;
-        border-top: 18px solid transparent !important;
-        border-bottom: 18px solid transparent !important;
-        border-left: 28px solid #5a1414 !important;
-        background: transparent !important;
+        margin-left: 6px !important;
+        border-top: 14px solid transparent !important;
+        border-bottom: 14px solid transparent !important;
+        border-left: 22px solid #ffe1d8 !important;
+      }
+
+
+      .date-line {
+        margin-top: 16px !important; 
       }
     </style>
   </head>
@@ -68,21 +90,23 @@
           <p class="eyebrow">Қыз ұзату тойына шақыру</p>
           <h1>Айнұр</h1>
           <p class="date-line">21 / 08 / 2026</p>
-          <button class="music-button" id="musicButton" type="button" aria-label="Музыканы қосу">
-            <span class="play-icon" aria-hidden="true"></span>
-          </button>
-          <audio id="weddingMusic" preload="none" src="music.mp3"></audio>
         </div>
       </section>
 
-      <section class="section intro">
-        <p class="section-title">Құрметті қонақтар!</p>
-        <p class="parents">Қабылжан-Нұрсулу</p>
-        <p class="body-copy">
-          СІЗ(ДЕР)ДІ қызымыз <strong>Айнұрдың</strong> ұзату тойына арналған салтанатты
-          ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!
-        </p>
-      </section>
+      <section class="section ceremony">
+        <button class="music-button" id="musicButton" type="button" aria-label="Музыканы қосу">
+            <span class="play-icon" aria-hidden="true"></span>
+          </button>
+          <audio id="weddingMusic" preload="none" src="music.mp3"></audio>
+          <br></br>
+      <p class="section-title">Құрметті қонақтар!</p>
+      <p class="body-copy">
+      СІЗДЕРДІ 
+      <strong class="highlight-name">АЙНҰРДЫҢ</strong> 
+      ұзату тойына арналған салтанатты 
+      ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!
+      </p>
+    </section>
 
       <section class="section ceremony">
         <p class="section-title">Той салтанаты:</p>
@@ -90,7 +114,7 @@
         <p class="ceremony-time">Сағат 17:00-де басталады</p>
       </section>
 
-      <section class="section countdown-section">
+      <section class="section ceremony">
         <p class="section-title">Тойға дейін</p>
         <div class="countdown" aria-label="Тойға дейін қалған уақыт">
           <div>
@@ -127,7 +151,7 @@
         </a>
       </section>
 
-      <section class="section rsvp">
+      <section class="section ceremony">
         <p class="section-title">Тойға келетініңізді растауыңызды сұраймыз</p>
         <form id="rsvpForm" class="rsvp-form">
           <label>
