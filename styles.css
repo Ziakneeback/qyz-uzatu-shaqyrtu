@@ -106,7 +106,7 @@ h1 {
   color: var(--wine);
   font-family: "Bad Script", cursive;
   font-size: clamp(76px, 20vw, 80px);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -271,9 +271,10 @@ h1 {
 }
 
 .venue {
-  margin-top: 30px;
+  margin-top: 0px;
   color: var(--wine);
   font-size: 28px;
+  line-height: 40px;
   font-weight: 700;
 }
 
