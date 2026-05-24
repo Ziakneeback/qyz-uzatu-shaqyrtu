@@ -107,7 +107,8 @@ h1 {
   font-family: "Bad Script", cursive;
   font-size: clamp(76px, 20vw, 80px);
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.5;
+  
 }
 
 .date-line {
