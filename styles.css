@@ -110,6 +110,15 @@ h1 {
   line-height: 1.5;
   
 }
+h2 {
+  margin: 4px 0 8px;
+  color: var(--wine);
+  font-family: "Bad Script", cursive;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  
+}
 
 .date-line {
   color: var(--wine);
